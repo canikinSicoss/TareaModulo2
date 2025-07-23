@@ -1,0 +1,29 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Esto es CRUCIAL. Indica que la resolución de módulos comienza desde la raíz del proyecto.
+    "paths": {
+      "@/lib/*": ["lib/*"], // Esto es un alias, puedes usarlo para `import { cn } from "@/lib/utils"`
+      "@/components/*": ["components/*"] // Ejemplo de otro alias
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
